@@ -19,17 +19,17 @@
 # Change the file extension to match the format (.xml for XML, etc...)
 #
 ###
-title: "TODO - Your title"
-abbrev: "TODO - Abbreviation"
-category: info
+title: "IPv6 mechanism for determining source and destination address pairs"
+abbrev: "IPv6 Get Address Pairs"
+category: std
 
-docname: draft-todo-yourname-protocol-latest
+docname: draft-nb-6man-getv6apr-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
 consensus: true
 v: 3
-area: AREA
+area: Int
 workgroup: WG Working Group
 keyword:
  - next generation
@@ -37,27 +37,29 @@ keyword:
  - sparkling distributed ledger
 venue:
   group: WG
-  type: Working Group
-  mail: WG@example.com
+  type: 6MAN
+  mail: ipv6@ietf.org
   arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
 
 author:
- -
-    fullname: Your Name Here
-    organization: Your Organization Here
-    email: your.email@example.com
+      -
+        ins: N. Buraglio
+        name: Nick Buraglio
+        org: Energy Sciences Network
+        email: buraglio@forwardingplane.net
 
 normative:
-
+  RFC2119:
+  RFC4193:
+  RFC7078:
+  RFC7526:
+  RFC8925:
 informative:
 
 
 --- abstract
 
-TODO Abstract
-
+This provides a comprehensive mechanism for determining a "best use" source address / destination address (SA/DA) pair for IPv6 connections and is intended to be a modernized replacement for existing SA/DA algorithms such as socket.getaddrinfo(). Instead of the current methodology of returning a list of destination addresses, this returns a list of source and destination address pairs, which are evaluated based on pre-determined and potentially user defined criteria. This mitigates the problem of the operating system choosing an inappropriate source address, as can occur with legacy mechanisms. 
 
 --- middle
 
