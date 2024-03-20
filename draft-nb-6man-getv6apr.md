@@ -9,17 +9,17 @@ number:
 date:
 consensus: true
 v: 3
-area: Int
-workgroup: WG Working Group
+area: "Internet"
+workgroup: "IPv6 Maintenance"
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: 6MAN
-  mail: ipv6@ietf.org
-  arch: https://example.com/WG
+  group: "IPv6 Maintenance"
+  type: "Working Group"
+  mail: "ipv6@ietf.org"
+  arch: "https://mailarchive.ietf.org/arch/browse/ipv6/"
 
 author:
       -
