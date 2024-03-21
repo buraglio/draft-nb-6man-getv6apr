@@ -71,8 +71,12 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Limitations of Current Implementations
+   3.  Current Implementations and Inherent Limitations
    4.  Proposed
+     4.1.  Source address enumeration and availability handling
+     4.2.  Active probing
+     4.3.  State caching
+     4.4.  Operating system differences
    5.  Example Code
    6.  Security Considerations
    7.  IANA Considerations
@@ -114,9 +118,9 @@ Table of Contents
    of a device network interfaces as to originate and understand both
    IPv4 and IPv6 packets.
 
-3.  Limitations of Current Implementations
+3.  Current Implementations and Inherent Limitations
 
-   PLACEHOLDER via RFC6724:
+   PLACEHOLDER via [RFC6724]:
 
    In this implementation architecture, applications use APIs [10] like
    getaddrinfo() that return a list of addresses to the application.
@@ -131,7 +135,20 @@ Table of Contents
 
 4.  Proposed
 
+4.1.  Source address enumeration and availability handling
+
+4.2.  Active probing
+
+4.3.  State caching
+
+4.4.  Operating system differences
+
 5.  Example Code
+
+   A working implementation of address pair enumeration, testing, and
+   active probing called [GETAPR] can be found on GitHub here.
+
+   Add agreed upon code here
 
 6.  Security Considerations
 
@@ -175,6 +192,9 @@ Table of Contents
 
 8.2.  Informative References
 
+   [GETAPR]   "Example code repo", n.d.,
+              <https://github.com/becarpenter/getapr>.
+
    [RFC6724]  Thaler, D., Ed., Draves, R., Matsumoto, A., and T. Chown,
               "Default Address Selection for Internet Protocol Version 6
               (IPv6)", RFC 6724, DOI 10.17487/RFC6724, September 2012,
@@ -182,7 +202,7 @@ Table of Contents
 
 Acknowledgments
 
-   TODO acknowledge.
+   The authors would like to acknowledge the valuable input from
 
 Author's Address
 
