@@ -12,9 +12,7 @@ v: 3
 area: "Internet"
 workgroup: "IPv6 Maintenance"
 keyword:
- - next generation
- - unicorn
- - sparkling distributed ledger
+ - IPv6
 venue:
   group: "IPv6 Maintenance"
   type: "Working Group"
@@ -36,6 +34,9 @@ normative:
   RFC8925:
 informative:
   RFC6724:
+  GETAPR:
+    target: https://github.com/becarpenter/getapr
+    title: "Example code repo"
 
 --- abstract
 
@@ -55,9 +56,9 @@ SA: Source Address
 DA: Destination Address
 Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
 
-# Limitations of Current Implementations
+# Current Implementations and Inherent Limitations
 
-PLACEHOLDER via RFC6724:
+PLACEHOLDER via [RFC6724]:
 
 ```
 In this implementation architecture, applications use APIs [10] like
@@ -74,7 +75,20 @@ alternatives.
 
 # Proposed
 
+## Source address enumeration and availability handling
+
+## Active probing
+
+## State caching
+
+## Operating system differences
+
 # Example Code
+A working implementation of address pair enumeration, testing, and active probing called [GETAPR] can be found on GitHub here.
+
+```
+Add agreed upon code here
+```
 
 # Security Considerations
 
@@ -85,10 +99,9 @@ TODO Security
 
 This document has no IANA actions.
 
-
 --- back
 
 # Acknowledgments
 {:numbered="false"}
 
-TODO acknowledge.
+The authors would like to acknowledge the valuable input from
