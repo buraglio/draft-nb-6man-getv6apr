@@ -57,7 +57,7 @@ Dual-Stack: Configuration of a device network interfaces as to originate and und
 
 # Limitations of Current Implementations
 
-PLACEHOLDER via RFC6724: 
+PLACEHOLDER via RFC6724:
 
 ```
 In this implementation architecture, applications use APIs [10] like
