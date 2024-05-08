@@ -60,6 +60,7 @@ SA: Source Address
 DA: Destination Address
 
 Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
+Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.
 
 Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.
 
@@ -86,10 +87,15 @@ alternatives.
 # Proposed
 
 ## Source address enumeration and availability handling
+A given host will have multiple addresses in an environment that support IPv6, and will have multiple addresses in different address families when operating on a dual-stacked network. Because there may exist multiple valid destination addresses returned from any given DNS query, consisting of both IPv6 and IPv4 addresses as well as the potential presence of a known local address that is unique to the particular network locality, a mechanism for enumerating and testing each address pair must exist in order to ensure both appropriate resource use (i.e. using a known local address when operating on the known-local network).
 
 ## Active probing
+Due to the dynamic nature of internetworking, active probing of destinations in use should be performed to ensure the best possible and most performant destination is cached for use. This active probing includes all destinations returned by a DNS query for a given resource. These targets are stored in a local cache and ranked by best performance as defined by the fastest response time from each source address local to the host.
+
+Probing targets should rotate and be refreshed at a regular interval in order to prevent unintentional oversubscription of both the probe targets and any intermediary links in the path.
 
 ## State caching
+Each system process should cache the source and destination address pairs in a ranked order for system-wide reference by any application requesting network resources, or by the operating system itself.
 
 ## Operating system differences
 
@@ -114,4 +120,4 @@ This document has no IANA actions.
 # Acknowledgments
 {:numbered="false"}
 
-The authors would like to acknowledge the valuable input from
+The authors would like to acknowledge the valuable input from Brian Carpenter
