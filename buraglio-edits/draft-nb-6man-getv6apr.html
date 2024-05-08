@@ -1198,7 +1198,8 @@ described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</s
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
 <p id="section-2-2">SA: Source Address<a href="#section-2-2" class="pilcrow">¶</a></p>
 <p id="section-2-3">DA: Destination Address<a href="#section-2-3" class="pilcrow">¶</a></p>
-<p id="section-2-4">Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-4">Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
+Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.<a href="#section-2-4" class="pilcrow">¶</a></p>
 <p id="section-2-5">Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.<a href="#section-2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1232,21 +1233,25 @@ alternatives.
 <section id="section-4.1">
         <h3 id="name-source-address-enumeration-">
 <a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-source-address-enumeration-" class="section-name selfRef">Source address enumeration and availability handling</a>
-      </h3>
+        </h3>
+<p id="section-4.1-1">A given host will have multiple addresses in an environment that support IPv6, and will have multiple addresses in different address families when operating on a dual-stacked network. Because there may exist multiple valid destination addresses returned from any given DNS query, consisting of both IPv6 and IPv4 addresses as well as the potential presence of a known local address that is unique to the particular network locality, a mechanism for enumerating and testing each address pair must exist in order to ensure both appropriate resource use (i.e. using a known local address when operating on the known-local network).<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="active-probing">
 <section id="section-4.2">
         <h3 id="name-active-probing">
 <a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-active-probing" class="section-name selfRef">Active probing</a>
-      </h3>
+        </h3>
+<p id="section-4.2-1">Due to the dynamic nature of internetworking, active probing of destinations in use should be performed to ensure the best possible and most performant destination is cached for use. This active probing includes all destinations returned by a DNS query for a given resource. These targets are stored in a local cache and ranked by best performance as defined by the fastest response time from each source address local to the host.<a href="#section-4.2-1" class="pilcrow">¶</a></p>
+<p id="section-4.2-2">Probing targets should rotate and be refreshed at a regular interval in order to prevent unintentional oversubscription of both the probe targets and any intermediary links in the path.<a href="#section-4.2-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="state-caching">
 <section id="section-4.3">
         <h3 id="name-state-caching">
 <a href="#section-4.3" class="section-number selfRef">4.3. </a><a href="#name-state-caching" class="section-name selfRef">State caching</a>
-      </h3>
+        </h3>
+<p id="section-4.3-1">Each system process should cache the source and destination address pairs in a ranked order for system-wide reference by any application requesting network resources, or by the operating system itself.<a href="#section-4.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="operating-system-differences">
@@ -1349,7 +1354,7 @@ Add agreed upon code here
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">The authors would like to acknowledge the valuable input from<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-1">The authors would like to acknowledge the valuable input from Brian Carpenter<a href="#appendix-A-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
