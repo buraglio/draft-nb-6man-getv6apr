@@ -4,8 +4,8 @@
 
 IPv6 Maintenance                                             N. Buraglio
 Internet-Draft                                   Energy Sciences Network
-Intended status: Standards Track                           21 March 2024
-Expires: 22 September 2024
+Intended status: Standards Track                              8 May 2024
+Expires: 9 November 2024
 
 
   IPv6 mechanism for determining source and destination address pairs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 September 2024.
+   This Internet-Draft will expire on 9 November 2024.
 
 Copyright Notice
 
@@ -116,7 +116,9 @@ Table of Contents
 
    SA: Source Address DA: Destination Address Dual-Stack: Configuration
    of a device network interfaces as to originate and understand both
-   IPv4 and IPv6 packets.
+   IPv4 and IPv6 packets.  Known Local Prefix: A prefix known to be
+   local to the administrative domain of the network the host resides on
+   at a given time.
 
 3.  Current Implementations and Inherent Limitations
 
@@ -137,9 +139,36 @@ Table of Contents
 
 4.1.  Source address enumeration and availability handling
 
+   A given host will have multiple addresses in an environment that
+   support IPv6, and will have multiple addresses in different address
+   families when operating on a dual-stacked network.  Because there may
+   exist multiple valid destination addresses returned from any given
+   DNS query, consisting of both IPv6 and IPv4 addresses as well as the
+   potential presence of a known local address that is unique to the
+   particular network locality, a mechanism for enumerating and testing
+   each address pair must exist in order to ensure both appropriate
+   resource use (i.e. using a known local address when operating on the
+   known-local network).
+
 4.2.  Active probing
 
+   Due to the dynamic nature of internetworking, active probing of
+   destinations in use should be performed to ensure the best possible
+   and most performant destination is cached for use.  This active
+   probing includes all destinations returned by a DNS query for a given
+   resource.  These targets are stored in a local cache and ranked by
+   best performance as defined by the fastest response time from each
+   source address local to the host.
+
+   Probing targets should rotate and be refreshed at a regular interval
+   in order to prevent unintentional oversubscription of both the probe
+   targets and any intermediary links in the path.
+
 4.3.  State caching
+
+   Each system process should cache the source and destination address
+   pairs in a ranked order for system-wide reference by any application
+   requesting network resources, or by the operating system itself.
 
 4.4.  Operating system differences
 
@@ -202,7 +231,8 @@ Table of Contents
 
 Acknowledgments
 
-   The authors would like to acknowledge the valuable input from
+   The authors would like to acknowledge the valuable input from Brian
+   Carpenter
 
 Author's Address
 
