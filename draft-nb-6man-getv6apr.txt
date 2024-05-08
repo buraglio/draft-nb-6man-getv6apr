@@ -114,15 +114,31 @@ Table of Contents
    BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-   SA: Source Address DA: Destination Address Dual-Stack: Configuration
-   of a device network interfaces as to originate and understand both
-   IPv4 and IPv6 packets.  Known Local Prefix: A prefix known to be
-   local to the administrative domain of the network the host resides on
-   at a given time.
+   SA: Source Address
+
+   DA: Destination Address
+
+   Dual-Stack: Configuration of a device network interfaces as to
+   originate and understand both IPv4 and IPv6 packets.  Known Local
+   Prefix: A prefix known to be local to the administrative domain of
+   the network the host resides on at a given time.
+
+   Known Local Prefix: A prefix known to be local to the administrative
+   domain of the network the host resides on at a given time.
 
 3.  Current Implementations and Inherent Limitations
 
-   PLACEHOLDER via [RFC6724]:
+   Current implementations of SA/DA selection are limited in several
+   notable ways.  Current implementations include a lack of definable
+   user control over source and destination address selection pairs,
+   limited or no mechanism for periodic testing of address pairs and no
+   inherent way to support performance and availability of resources.
+   The most common implementations are derived from the getaddrinfo()
+   implementation which returns one or more addrinfo structures, each of
+   which contains an Internet address that can be specified in a call to
+   bind() or connect() as described in [GETADDRINFO].
+
+   via [RFC6724]:
 
    In this implementation architecture, applications use APIs [10] like
    getaddrinfo() that return a list of addresses to the application.
@@ -220,6 +236,11 @@ Table of Contents
               <https://www.rfc-editor.org/rfc/rfc8925>.
 
 8.2.  Informative References
+
+   [GETADDRINFO]
+              "Linux MAN page for getaddrinfo()", n.d.,
+              <https://man7.org/linux/man-pages/man3/
+              getaddrinfo.3.html>.
 
    [GETAPR]   "Example code repo", n.d.,
               <https://github.com/becarpenter/getapr>.

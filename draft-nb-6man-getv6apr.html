@@ -1196,10 +1196,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document are to be interpreted as
 described in BCP 14 <span>[<a href="#RFC2119" class="cite xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="cite xref">RFC8174</a>]</span> when, and only when, they
 appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶</a></p>
-<p id="section-2-2">SA: Source Address
-DA: Destination Address
-Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
-Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-2">SA: Source Address<a href="#section-2-2" class="pilcrow">¶</a></p>
+<p id="section-2-3">DA: Destination Address<a href="#section-2-3" class="pilcrow">¶</a></p>
+<p id="section-2-4">Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
+Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.<a href="#section-2-4" class="pilcrow">¶</a></p>
+<p id="section-2-5">Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.<a href="#section-2-5" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="current-implementations-and-inherent-limitations">
@@ -1207,8 +1208,9 @@ Known Local Prefix: A prefix known to be local to the administrative domain of t
       <h2 id="name-current-implementations-and">
 <a href="#section-3" class="section-number selfRef">3. </a><a href="#name-current-implementations-and" class="section-name selfRef">Current Implementations and Inherent Limitations</a>
       </h2>
-<p id="section-3-1">PLACEHOLDER via <span>[<a href="#RFC6724" class="cite xref">RFC6724</a>]</span>:<a href="#section-3-1" class="pilcrow">¶</a></p>
-<p id="section-3-2"><code>
+<p id="section-3-1">Current implementations of SA/DA selection are limited in several notable ways. Current implementations include a lack of definable user control over source and destination address selection pairs, limited or no mechanism for periodic testing of address pairs and no inherent way to support performance and availability of resources. The most common implementations are derived from the getaddrinfo() implementation which returns one or more addrinfo structures, each of which contains an Internet address that can be specified in a call to bind() or connect() as described in <span>[<a href="#GETADDRINFO" class="cite xref">GETADDRINFO</a>]</span>.<a href="#section-3-1" class="pilcrow">¶</a></p>
+<p id="section-3-2">via <span>[<a href="#RFC6724" class="cite xref">RFC6724</a>]</span>:<a href="#section-3-2" class="pilcrow">¶</a></p>
+<p id="section-3-3"><code>
 In this implementation architecture, applications use APIs [10] like
 getaddrinfo() that return a list of addresses to the application.
 This list might contain both IPv6 and IPv4 addresses (sometimes
@@ -1219,7 +1221,7 @@ list, looping over the list of addresses until it finds a working
 address.  In any case, the network layer is never in a situation
 where it needs to choose a destination address from several
 alternatives.
-</code><a href="#section-3-2" class="pilcrow">¶</a></p>
+</code><a href="#section-3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="proposed">
@@ -1331,6 +1333,10 @@ Add agreed upon code here
 <a href="#section-8.2" class="section-number selfRef">8.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
         </h3>
 <dl class="references">
+<dt id="GETADDRINFO">[GETADDRINFO]</dt>
+        <dd>
+<span class="refTitle">"Linux MAN page for getaddrinfo()"</span>, <span>n.d.</span>, <span>&lt;<a href="https://man7.org/linux/man-pages/man3/getaddrinfo.3.html">https://man7.org/linux/man-pages/man3/getaddrinfo.3.html</a>&gt;</span>. </dd>
+<dd class="break"></dd>
 <dt id="GETAPR">[GETAPR]</dt>
         <dd>
 <span class="refTitle">"Example code repo"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/becarpenter/getapr">https://github.com/becarpenter/getapr</a>&gt;</span>. </dd>
