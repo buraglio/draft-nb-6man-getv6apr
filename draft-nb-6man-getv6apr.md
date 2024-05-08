@@ -37,6 +37,9 @@ informative:
   GETAPR:
     target: https://github.com/becarpenter/getapr
     title: "Example code repo"
+  GETADDRINFO:
+    target: https://man7.org/linux/man-pages/man3/getaddrinfo.3.html
+    title: "Linux MAN page for getaddrinfo()"
 
 --- abstract
 
@@ -53,12 +56,19 @@ With the rapid expansion of IPv6 and the building momentum of retiring IPv4 as a
 {::boilerplate bcp14-tagged}
 
 SA: Source Address
+
 DA: Destination Address
+
 Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
+
+Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.
+
 
 # Current Implementations and Inherent Limitations
 
-PLACEHOLDER via [RFC6724]:
+Current implementations of SA/DA selection are limited in several notable ways. Current implementations include a lack of definable user control over source and destination address selection pairs, limited or no mechanism for periodic testing of address pairs and no inherent way to support performance and availability of resources. The most common implementations are derived from the getaddrinfo() implementation which returns one or more addrinfo structures, each of which contains an Internet address that can be specified in a call to bind() or connect() as described in [GETADDRINFO].
+
+ via [RFC6724]:
 
 ```
 In this implementation architecture, applications use APIs [10] like
