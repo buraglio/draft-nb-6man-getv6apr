@@ -55,7 +55,7 @@ With the rapid expansion of IPv6 and the building momentum of retiring IPv4 as a
 SA: Source Address
 DA: Destination Address
 Dual-Stack: Configuration of a device network interfaces as to originate and understand both IPv4 and IPv6 packets.
-Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time. 
+Known Local Prefix: A prefix known to be local to the administrative domain of the network the host resides on at a given time.
 
 # Current Implementations and Inherent Limitations
 
