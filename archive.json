@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-05-07T00:48:13.336377+00:00",
+  "timestamp": "2024-05-09T00:48:31.012655+00:00",
   "repo": "buraglio/draft-nb-6man-getv6apr",
   "labels": [
     {
@@ -50,5 +50,34 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOLjGbxs5u7w-P",
+      "title": "Add a bit more about current implementations",
+      "url": "https://github.com/buraglio/draft-nb-6man-getv6apr/pull/1",
+      "state": "MERGED",
+      "author": "buraglio",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2024-05-08T22:44:50Z",
+      "updatedAt": "2024-05-08T22:46:16Z",
+      "baseRepository": "buraglio/draft-nb-6man-getv6apr",
+      "baseRefName": "main",
+      "baseRefOid": "10382164e99dab47cf6589513c7a0a27844a4c12",
+      "headRepository": "buraglio/draft-nb-6man-getv6apr",
+      "headRefName": "buraglio-edits",
+      "headRefOid": "3b5055f899fbd06c8b8fb52d57819c6bc6be3d87",
+      "closedAt": "2024-05-08T22:46:16Z",
+      "mergedAt": "2024-05-08T22:46:16Z",
+      "mergedBy": "buraglio",
+      "mergeCommit": {
+        "oid": "c7764a2ce404c0e8e394fa708a53a2453e302a4e"
+      },
+      "comments": [],
+      "reviews": []
+    }
+  ]
 }
