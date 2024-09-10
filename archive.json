@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-09-08T01:02:03.737982+00:00",
+  "timestamp": "2024-09-10T00:58:02.582862+00:00",
   "repo": "buraglio/draft-nb-6man-getv6apr",
   "labels": [
     {
@@ -49,7 +49,32 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 2,
+      "id": "I_kwDOLjGbxs6V3tjE",
+      "title": "include updates for networks in RA?",
+      "url": "https://github.com/buraglio/draft-nb-6man-getv6apr/issues/2",
+      "state": "OPEN",
+      "author": "buraglio",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "SA/DA testing results in the RA",
+      "createdAt": "2024-09-09T16:34:06Z",
+      "updatedAt": "2024-09-09T16:35:00Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "buraglio",
+          "authorAssociation": "OWNER",
+          "body": "Hint file or something like pref64?",
+          "createdAt": "2024-09-09T16:34:38Z",
+          "updatedAt": "2024-09-09T16:35:00Z"
+        }
+      ]
+    }
+  ],
   "pulls": [
     {
       "number": 1,
