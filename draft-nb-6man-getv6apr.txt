@@ -4,8 +4,8 @@
 
 IPv6 Maintenance                                             N. Buraglio
 Internet-Draft                                   Energy Sciences Network
-Intended status: Standards Track                              8 May 2024
-Expires: 9 November 2024
+Intended status: Standards Track                         4 February 2025
+Expires: 8 August 2025
 
 
   IPv6 mechanism for determining source and destination address pairs
@@ -51,11 +51,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 November 2024.
+   This Internet-Draft will expire on 8 August 2025.
 
 Copyright Notice
 
-   Copyright (c) 2024 IETF Trust and the persons identified as the
+   Copyright (c) 2025 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
