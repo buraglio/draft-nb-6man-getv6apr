@@ -36,7 +36,10 @@ informative:
   RFC6724:
   GETAPR:
     target: https://github.com/becarpenter/getapr
-    title: "Example code repo"
+    title: "Example Python code repo"
+  GETAPR-GO:
+    target: https://github.com/buraglio/getapr-golang
+    title: "Example GoLang code repo"
   GETADDRINFO:
     target: https://man7.org/linux/man-pages/man3/getaddrinfo.3.html
     title: "Linux MAN page for getaddrinfo()"
@@ -100,7 +103,9 @@ Each system process should cache the source and destination address pairs in a r
 ## Operating system differences
 
 # Example Code
-A working implementation of address pair enumeration, testing, and active probing called [GETAPR] can be found on GitHub here.
+A working implementation of address pair enumeration, testing, and active probing called written in Python [GETAPR] can be found on GitHub here. 
+
+A Go implementation of network path analysis tool that tests connectivity between source and destination addresses, enumerating address pair availability and latency can he found here [GETRAPR-GO]
 
 ```
 Add agreed upon code here
