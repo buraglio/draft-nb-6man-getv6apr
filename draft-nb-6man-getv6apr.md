@@ -103,7 +103,7 @@ Each system process should cache the source and destination address pairs in a r
 ## Operating system differences
 
 # Example Code
-A working implementation of address pair enumeration, testing, and active probing called written in Python [GETAPR] can be found on GitHub here. 
+A working implementation of address pair enumeration, testing, and active probing called written in Python [GETAPR] can be found on GitHub here.
 
 A Go implementation of network path analysis tool that tests connectivity between source and destination addresses, enumerating address pair availability and latency can he found here [GETRAPR-GO]
 
