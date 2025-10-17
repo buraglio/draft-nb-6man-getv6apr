@@ -9,23 +9,23 @@
 <meta content='
        This provides a comprehensive mechanism for determining a "best use" source address / destination address (SA/DA) pair for IPv6 connections and is intended to be a modernized replacement for existing SA/DA algorithms such as socket.getaddrinfo(). Instead of the current methodology of returning a list of destination addresses, this returns a list of source and destination address pairs, which are evaluated based on pre-determined and potentially user defined criteria. This mitigates the problem of the operating system choosing an inappropriate source address, as can occur with legacy mechanisms. 
     ' name="description">
-<meta content="xml2rfc 3.26.0" name="generator">
+<meta content="xml2rfc 3.30.2" name="generator">
 <meta content="IPv6" name="keyword">
 <meta content="draft-nb-6man-getv6apr-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.26.0
-    Python 3.12.8
+  xml2rfc 3.30.2
+    Python 3.12.11
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
-    Jinja2 3.1.5
-    lxml 5.3.0
-    platformdirs 4.3.6
+    Jinja2 3.1.6
+    lxml 5.3.1
+    platformdirs 4.4.0
     pycountry 24.6.1
     PyYAML 6.0.2
-    requests 2.32.3
-    setuptools 70.3.0
-    wcwidth 0.2.13
+    requests 2.32.5
+    setuptools 80.9.0
+    wcwidth 0.2.14
 -->
 <link href="draft-nb-6man-getv6apr.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -435,7 +435,7 @@ dl {
     margin-bottom: 0;
   }
 }
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
@@ -1044,11 +1044,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">IPv6 Get Address Pairs</td>
-<td class="right">February 2025</td>
+<td class="right">October 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Buraglio</td>
-<td class="center">Expires 8 August 2025</td>
+<td class="center">Expires 20 April 2026</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1061,12 +1061,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-nb-6man-getv6apr-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-02-04" class="published">4 February 2025</time>
+<time datetime="2025-10-17" class="published">17 October 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-08-08">8 August 2025</time></dd>
+<dd class="expires"><time datetime="2026-04-20">20 April 2026</time></dd>
 <dt class="label-authors">Author:</dt>
 <dd class="authors">
 <div class="author">
@@ -1113,7 +1113,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 8 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 20 April 2026.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1287,10 +1287,11 @@ alternatives.
       <h2 id="name-example-code">
 <a href="#section-5" class="section-number selfRef">5. </a><a href="#name-example-code" class="section-name selfRef">Example Code</a>
       </h2>
-<p id="section-5-1">A working implementation of address pair enumeration, testing, and active probing called <span>[<a href="#GETAPR" class="cite xref">GETAPR</a>]</span> can be found on GitHub here.<a href="#section-5-1" class="pilcrow">¶</a></p>
-<p id="section-5-2"><code>
+<p id="section-5-1">A working implementation of address pair enumeration, testing, and active probing called written in Python <span>[<a href="#GETAPR" class="cite xref">GETAPR</a>]</span> can be found on GitHub here.<a href="#section-5-1" class="pilcrow">¶</a></p>
+<p id="section-5-2">A Go implementation of network path analysis tool that tests connectivity between source and destination addresses, enumerating address pair availability and latency can he found here [GETRAPR-GO]<a href="#section-5-2" class="pilcrow">¶</a></p>
+<p id="section-5-3"><code>
 Add agreed upon code here
-</code><a href="#section-5-2" class="pilcrow">¶</a></p>
+</code><a href="#section-5-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="security-considerations">
@@ -1359,7 +1360,11 @@ Add agreed upon code here
 <dd class="break"></dd>
 <dt id="GETAPR">[GETAPR]</dt>
         <dd>
-<span class="refTitle">"Example code repo"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/becarpenter/getapr">https://github.com/becarpenter/getapr</a>&gt;</span>. </dd>
+<span class="refTitle">"Example Python code repo"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/becarpenter/getapr">https://github.com/becarpenter/getapr</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="GETAPR-GO">[GETAPR-GO]</dt>
+        <dd>
+<span class="refTitle">"Example GoLang code repo"</span>, <span>n.d.</span>, <span>&lt;<a href="https://github.com/buraglio/getapr-golang">https://github.com/buraglio/getapr-golang</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6724">[RFC6724]</dt>
       <dd>

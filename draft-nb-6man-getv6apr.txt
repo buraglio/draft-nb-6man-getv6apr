@@ -4,8 +4,8 @@
 
 IPv6 Maintenance                                             N. Buraglio
 Internet-Draft                                   Energy Sciences Network
-Intended status: Standards Track                         4 February 2025
-Expires: 8 August 2025
+Intended status: Standards Track                         17 October 2025
+Expires: 20 April 2026
 
 
   IPv6 mechanism for determining source and destination address pairs
@@ -51,7 +51,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 8 August 2025.
+   This Internet-Draft will expire on 20 April 2026.
 
 Copyright Notice
 
@@ -191,7 +191,12 @@ Table of Contents
 5.  Example Code
 
    A working implementation of address pair enumeration, testing, and
-   active probing called [GETAPR] can be found on GitHub here.
+   active probing called written in Python [GETAPR] can be found on
+   GitHub here.
+
+   A Go implementation of network path analysis tool that tests
+   connectivity between source and destination addresses, enumerating
+   address pair availability and latency can he found here [GETRAPR-GO]
 
    Add agreed upon code here
 
@@ -242,8 +247,12 @@ Table of Contents
               <https://man7.org/linux/man-pages/man3/
               getaddrinfo.3.html>.
 
-   [GETAPR]   "Example code repo", n.d.,
+   [GETAPR]   "Example Python code repo", n.d.,
               <https://github.com/becarpenter/getapr>.
+
+   [GETAPR-GO]
+              "Example GoLang code repo", n.d.,
+              <https://github.com/buraglio/getapr-golang>.
 
    [RFC6724]  Thaler, D., Ed., Draves, R., Matsumoto, A., and T. Chown,
               "Default Address Selection for Internet Protocol Version 6
